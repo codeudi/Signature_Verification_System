@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signature Verification System</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Signature Verification System</h1>
+    <div class="upload">
+      <div class="upload-section">
+        <label for="signature1"><b>Choose Signature :</b></label>
+        <input type="file" id="signature1" accept=".jpg, .jpeg, .png">
+        <img id="signature-preview-1" class="signature-preview" src="" alt="Signature 1 Preview">
+      </div>
+      <div class="upload-section">
+        <label for="signature2"><b>Choose Signature :</b></label>
+        <input type="file" id="signature2" accept=".jpg, .jpeg, .png">
+        <img id="signature-preview-2" class="signature-preview" src="" alt="Signature 2 Preview">
+      </div>
+    </div>
+    <button id="verify-button">Verify</button>
+  <div class="section1">
+    <div id="rs">
+    <h3>RESULT : </h3>
+    <div id="result" class="result-section"></div>
+    </div>
+    <div id="hog-images">
+      <h3>HOG IMAGES</h3>
+      <div class="hog-image-container">
+        <img id="hog-image-1" class="hog-image" src="" alt="HOG Image 1">
+        <img id="hog-image-2" class="hog-image" src="" alt="HOG Image 2">
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
